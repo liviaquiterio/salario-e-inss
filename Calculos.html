@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Funcionário</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            border: 3px solid rgb(121, 162, 238);
+            padding: 3%;
+            width: 600px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            font-size: 50px;
+            background-color: cyan;
+        }
+       h3 {
+        background-color: rgb(209, 135, 228);
+        font-size: medium;
+       }
+       .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h3>Dados do Funcionário</h3>
+    <form name="funcionario" method="post" action="exibir_calculo.php">
+        <p>
+            <label>Nome do Funcionário:</label>
+            <input type="text" name="nome_funcionario" min="2" max="10000" required>
+        </p>
+        <p>
+            <label>Data de Admissão:</label>
+            <input type="date" name="data" min="2" max="10000" required>
+        </p>
+        <p>
+            <label>Salário:</label>
+            <input type="number" name="salario" min="2" max="10000" required>
+        </p>
+        <p>
+            <label>Cargo:</label>
+            <select name="cargo" required>
+                <option value="Analista_de_Sistemas">Analista de Sistemas</option>
+                <option value="Estagiário">Estagiário</option>
+                <option value="Programador_Júnior">Programador Júnior</option>
+                <option value="Designer_Gráfico">Designer Gráfico</option>
+            </select>  
+        </p>
+        <p>
+            <label>% INSS</label>
+            <input type="number" name="%inss" min="2" max="10000" required> 
+        </p>
+        <input type="submit" name="Mostrar" value="Mostrar">
+    </form>
+</div>
+</body>
+</html>
